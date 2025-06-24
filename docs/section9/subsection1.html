@@ -128,9 +128,9 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#912-add-node">9.1.2 Add Node</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#922-node-setting">9.2.2 Node Setting</a>
+    <li class="toctree-l2"><a class="reference internal" href="#913-node-setting">9.1.3 Node Setting</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#921-node-status-description">9.2.1 Node status description</a>
+    <li class="toctree-l2"><a class="reference internal" href="#914-node-status-description">9.1.4 Node status description</a>
     </li>
     </ul>
                   </li>
@@ -178,55 +178,38 @@
               
                 <h1 id="91-node">9.1 Node</h1>
 <h2 id="911-varieties-of-nodes">9.1.1 Varieties of Nodes</h2>
-<p>The node system currently provides the following categories: Input, Plugins, Converters, Preview, and Output.</p>
-<ul>
-<li>Input Node: This serves as the entry point for loading data that requires processing. Each pipeline must have exactly one Input Node - no more, no less.</li>
-<li>Plugin Nodes: These are algorithmic nodes that execute either pre-configured or user-defined Python code to perform computational operations on the data.</li>
-<li>Converter Nodes: These nodes handle data format conversions and transformations.</li>
-<li>Preview Nodes: These invoke preview interface, allowing users to visualize both the raw data and intermediate data generated during the processing pipeline.</li>
-<li>Output Node: This node determines whether and in what format the results should be saved to file.
-<img alt="Image_68" src="../images/image_68.png" /></li>
-</ul>
+<p>The node system currently provides the following categories: Input, Plugins, Converters, Preview, and Output.
+Input Node: This serves as the entry point for loading data that requires processing. Each pipeline must have exactly one Input Node - no more, no less.
+Plugin Nodes: These are algorithmic nodes that execute either pre-configured or user-defined Python code to perform computational operations on the data.
+Converter Nodes: These nodes handle data format conversions and transformations.
+Preview Nodes: These invoke preview interface, allowing users to visualize both the raw data and intermediate data generated during the processing pipeline.
+Output Node: This node determines whether and in what format the results should be saved to file.
+<img alt="Image" src="../images/image_78.png" /></p>
 <h2 id="912-add-node">9.1.2 Add Node</h2>
-<p>Right-click on any blank area of the workspace to access the main menu operations. Select the desired option to add it to workflow.</p>
-<p><img alt="Image_85" src="../images/image_85.png" /></p>
-<h2 id="922-node-setting">9.2.2 Node Setting</h2>
-<p>Right-click on a node in the workspace to access node-specific menu operations for the currently selected node. The Toolbar functions from left to right are: Reset Color, Pin, Delete, and Update Definition.The options panel on the right provides specific controls corresponding to each selected item's properties and settings.</p>
-<p><img alt="Image_55" src="../images/image_55.png" /></p>
-<h2 id="921-node-status-description">9.2.1 Node status description</h2>
-<p>The workflow consists of multiple nodes, each of which exhibits distinct visual states during editing and execution phases.</p>
-<ul>
-<li>During Editing:
-Nodes can display three states:</li>
-<li>Unselected nodes appear without borders</li>
-<li>
-<p><img alt="Image_14" src="../images/image_14.png" /></p>
-</li>
-<li></li>
-<li>Selected nodes are highlighted with a white border, and their associated input/output links are also displayed in white</li>
-<li>
-<p><img alt="Image_39" src="../images/image_39.png" /></p>
-</li>
-<li></li>
-<li>
+<p>Right-click on any blank area of the workspace to access the main menu operations. Select the desired option to add it to workflow.
+<img alt="Image" src="../images/image_79.png" /></p>
+<h2 id="913-node-setting">9.1.3 Node Setting</h2>
+<p>Right-click on a node in the workspace to access node-specific menu operations for the currently selected node. The Toolbar functions from left to right are: Reset Color, Pin, Delete, and Update Definition. The options panel on the right provides specific controls corresponding to each selected item's properties and settings.
+<img alt="Image" src="../images/image_80.png" /></p>
+<h2 id="914-node-status-description">9.1.4 Node status description</h2>
+<p>The workflow consists of multiple nodes, each of which exhibits distinct visual states during editing and execution phases.
+During Editing:
+Nodes can display three states:
+Unselected nodes appear without borders</p>
+<p><img alt="Image" src="../images/image_81.png" /></p>
+<p>Selected nodes are highlighted with a white border, and their associated input/output links are also displayed in white</p>
+<p><img alt="Image" src="../images/image_82.png" /></p>
 <p>Nodes with initialization errors are marked with a red border, indicating the need for definition correction
-<img alt="Image_66" src="../images/image_66.png" /></p>
-</li>
-<li>
+<img alt="Image" src="../images/image_83.png" /></p>
 <p>During Execution:
-Nodes transition through four distinct states:</p>
-</li>
-<li>Current: Indicated by a blue border, representing the node currently being processed</li>
-<li>Pending: Marked with a yellow border, signifying nodes awaiting processing</li>
-<li>Done: Displayed with a green border, denoting successfully completed nodes</li>
-<li>
-<p><img alt="Image_83" src="../images/image_83.png" /></p>
-</li>
-<li></li>
-<li>Error: Highlighted with a red border, indicating nodes that encountered processing exceptions
-<img alt="Image_56" src="../images/image_56.png" /></li>
-</ul>
-<p>The visual state system employs consistent color coding to provide immediate feedback on node status, facilitating efficient workflow monitoring and management.</p>
+Nodes transition through four distinct states:
+Current: Indicated by a blue border, representing the node currently being processed
+Pending: Marked with a yellow border, signifying nodes awaiting processing
+Done: Displayed with a green border, denoting successfully completed nodes</p>
+<p><img alt="Image" src="../images/image_84.png" /></p>
+<p>Error: Highlighted with a red border, indicating nodes that encountered processing exceptions
+<img alt="Image" src="../images/image_85.png" />
+The visual state system employs consistent color coding to provide immediate feedback on node status, facilitating efficient workflow monitoring and management.</p>
               
             </div>
           </div><footer>

@@ -1,6 +1,6 @@
 # 7 Dataset Detail Page
 
-## 本章内容
+## Contents
 
 * [Reports](subsection1.md)
 * [Labels](subsection2.md)

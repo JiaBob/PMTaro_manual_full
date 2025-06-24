@@ -1,6 +1,6 @@
-# 9 Plugin Page 
+# 9 Plugin Page
 
-## 本章内容
+## Contents
 
 * [Node](subsection1.md)
-* [Plugin ](subsection2.md)
+* [Plugin](subsection2.md)

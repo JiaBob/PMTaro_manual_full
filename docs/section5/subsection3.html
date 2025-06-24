@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>5.3 DICOM Server - PMTaro Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "5.3 DICOM Server";
+        var mkdocs_page_input_path = "section5\\subsection3.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> PMTaro Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../section1/index.html">1 Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../section2/index.html">2 Software Description</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">3 Installation and Setup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../section3/subsection1.html">Download PMTaro installer & Run setup wizard</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section3/subsection2.html">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">4 Software Page Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../section4/subsection1.html">Welcome Page</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section4/subsection2.html">Dataset Parse Page</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section4/subsection3.html">Dataset Detail Page</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section4/subsection4.html">Dataset Browing Page</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section4/subsection5.html">Pipelines Page</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">5 Welcome Page </span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="subsection1.html">New Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="subsection2.html">Recent Dataset</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">6 Dataset Parse Page </span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../section6/subsection1.html">Add Folder</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section6/subsection2.html">Prepare Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section6/subsection3.html">Refresh</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section6/subsection4.html">Manually Split</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section6/subsection5.html">Automatic Split</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section6/subsection6.html">Broom</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section6/subsection7.html">Parse</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section6/subsection8.html">Data swapper</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section6/subsection9.html">Settings</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">7 Dataset Detail Page</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../section7/subsection1.html">Reports</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section7/subsection2.html">Labels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section7/subsection3.html">Pipelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section7/subsection4.html">Attachments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section7/subsection5.html">Table setting & Filters</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">8 Dataset Browing Page</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../section8/subsection1.html">Image Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section8/subsection2.html">Data Interaction & Toolbar</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">9 Plugin Page </span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../section9/subsection1.html">Node</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section9/subsection2.html">Plugin </a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">10 Pipelines Page (MPF Post-processing)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../section10/subsection1.html">New Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section10/subsection2.html">Pipeline Control Panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section10/subsection3.html">View Control Panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section10/subsection5.html">MPF Phase Map Calculation Pipeline (Auto)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section10/subsection6.html">RMPFSL Map Calculation Pipeline (Auto)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section10/subsection7.html">MPF Map Calculation Pipeline (Auto)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PMTaro Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">5.3 DICOM Server</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="53-dicom-server">5.3 DICOM Server</h1>
+<p>Users can also to Pacs or other Dicom servers through settings
+<img alt="Image" src="../images/image_29.png" /></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

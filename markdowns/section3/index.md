@@ -1,6 +1,6 @@
 # 3 Installation and Setup
 
-## 本章内容
+## Contents
 
 * [Download PMTaro installer & Run setup wizard](subsection1.md)
-* [Configuration](subsection2.md)
+* [PMTaro Activation](subsection2.md)

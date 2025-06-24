@@ -1,18 +1,21 @@
-# 3.2 Configuration
+# 3.2 PMTaro Activation
+Step 1: When the user runs the software for the first time, the system will pop up an "Unregistered" prompt dialog box.
+![Image](../images/image_15.jpg)
 
-Step 1: We will enter the software configuration stage, which is designated for configuring the software's database and operational environment. Please click "Next" at this point to proceed.
+Step 2: After clicking "Close", the software registration tool will open automatically. In the registration tool, click the "Copy" button to copy the Machine ID of this machine.
 
-![Image_27](../images/image_27.png)
+Step 3: Provide the copied Machine ID to the technical support staff to obtain the authorization file license.json.
 
-Step 2: Then, we will select the necessary components for installation. All of these components must be installed for the software correctly; hence they are all pre-selected by default. Please ensure all components are checked and then click the "Next" button. If users have already installed the corresponding components locally, they can skip the installation step and proceed directly to configuration.
+Step 4: After downloading and saving the authorization file, click the "..." button in the registration tool, select the downloaded license.json file and click "Open".
 
-![Image_61](../images/image_61.png)
+![Image](../images/image_16.jpg)
+![Image](../images/image_17.jpg)
 
-Step 3: It is recommended to proceed with the default process for the installation packages that appear and complete the installation as prompted.
+Step 5: Click the "Activate" button, the system will verify the authorization file and pop up a confirmation prompt box after successful registration.
 
-![Image_78](../images/image_78.png)
+![Image](../images/image_18.jpg)
+![Image](../images/image_19.jpg)
 
-Step 4: Finally, we will reach the configuration interface. Users can choose to end the process directly at this point by selecting the default option, thus completing all installation steps.
+Step 6: Software registration successful.
 
-![Image_34](../images/image_34.png)
-
+![Image](../images/image_20.png)
