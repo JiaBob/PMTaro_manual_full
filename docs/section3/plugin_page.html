@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>插件页面 - PMTaro Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u63d2\u4ef6\u9875\u9762";
+        var mkdocs_page_input_path = "section3\\plugin_page.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> PMTaro Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../section1/index.html">1 介绍</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">2 安装与设置</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../section2/installation.html">下载 PMTaro 安装程序 & 运行设置向导</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section2/activation.html">激活</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section2/update.html">更新</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section2/uninstallation.html">删除</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">3 软件操作指南</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="homepage.html">欢迎页面</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dataset_page.html">数据集页面</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="project_page.html">项目页面</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="screening_page.html">阅片页面</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="plugin_page.html">插件页面</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#python">初始化Python脚本</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">例子</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">增加参数</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">自定义描述</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">代码与工作流节点的关系</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">即时测试</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#python_1">默认Python运行环境</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#type-hint-pipeline">Type Hint &amp; Pipeline类型</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#annotated">Annotated的使用方法：</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">另存为</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="workflow_page.html">工作流界面</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PMTaro Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">3 软件操作指南</li>
+      <li class="breadcrumb-item active">插件页面</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">插件页</h1>
+<p>插件，对于本软件来说是一个标准化的数据处理模块。以固定类型的数据作为模块的输入输出。此外，插件在工作流中是一个处理节点。以下展示了一个最简单的图像滤波功能插件从制作到使用的全流程：
+<img alt="Image" src="../images/create_plugin.gif" /></p>
+<p>接下来详细讲解每个环节</p>
+<h2 id="python">初始化Python脚本</h2>
+<p>插件的本质只是一个Python脚本文件，用户需要按照约定的格式书写就可以实现插件的运行。
+点击“初始化插件”，填写完自定义的插件名，插件描述和版本后，会自动生成一个 <strong>模板Python文件</strong></p>
+<p>以下是 <strong>模板Python文件</strong> 的内容：</p>
+<pre class="codehilite"><code>from pmt_type import *
+from pmt_type_options import *
+from typing import Annotated, Tuple
+# ======================= Please do not modify the above lines =======================
+
+# ======================= Security Notice =======================
+# 1. Dangerous operations like os.system() are blocked
+# 2. You can use normal file operations 
+#    - you can open files in anywhere, but writing will be redirected to safe directory
+#    - If your plugin's output is any file type, you must save the file by urself and return the file name
+# 3. Available helper functions:
+#    - get_output_directory() -&gt; str : get the address of the safe directory for read/write files
+# For more details please refer to our user manual.
+# ======================= End Security Notice =======================
+# Your import goes here
+
+
+class template:
+    &quot;&quot;&quot;
+        plugin descriptions...
+    &quot;&quot;&quot;
+    ### The following variables are mandatory
+    VERSION = '1'
+    EXECUTABLE_FUNCTION = [&quot;example&quot;]   # list the function name you want to execute in the Node
+
+
+    # Your function correspond to EXECUTABLE_FUNCTION
+    # The docstring must be in the requested format as below (like Google style)
+    # The input / output variable name must be mentioned in the docstring
+    # The input / output variable must be type hinting correctly with predefined types
+    # For detail of hint types, please refer to documents or pmt_type.py  
+
+    @classmethod
+    @validate_annotations   # use to valid Array, Matrix, Volume's dims
+    def example(cls, input_data1: CUSTOM) -&gt; Tuple[CUSTOM, CUSTOM]:
+        &quot;&quot;&quot;
+        Your function description here. You can write anything you want, 
+        but remember to leaver one blank line after. If you following Google-style or reStructuredText, 
+        you can customize parameters name and description, and the output name and description (like below).
+
+        Parameters:
+            input_data1: the name must be same as your first input's variable name
+
+        Returns:
+            output1_name: the output shown in the Node outputs
+            output2_name: description of the output data
+        &quot;&quot;&quot;
+        ### Your code goes here
+
+        ### If you have two outputs, make sure mention them in the docstring in order
+        a = input_data1
+        b = 1
+
+        return a, b   # order must align with the return type hint
+
+
+if __name__ == &quot;__main__&quot;:
+    ### You can test your code here
+
+    pass
+</code></pre>
+
+<p>以下是 <strong>模板Python文件</strong> 的内容讲解：</p>
+<pre class="codehilite"><code>from pmt_type import *
+from pmt_type_options import *
+from typing import Annotated, Tuple
+</code></pre>
+
+<p>导入内置文件用于Python <a href="https://peps.python.org/pep-0484/">Type Hint</a>。Type Hint是本软件主要自动注册插件的核心逻辑，用户只需要利用type hint的语法照常书写代码，无需额外为注册插件写配置文件。</p>
+<pre class="codehilite"><code>class template:
+    &quot;&quot;&quot;
+        plugin descriptions...
+    &quot;&quot;&quot;
+    ### The following variables are mandatory
+    VERSION = '1'
+    EXECUTABLE_FUNCTION = [&quot;example&quot;]   # list the function name you want to execute in the Node
+
+    @classmethod
+    @validate_annotations   # use to valid Array, Matrix, Volume's dims
+    def example(cls, input_data1: CUSTOM) -&gt; Tuple[CUSTOM, CUSTOM]:
+</code></pre>
+
+<p>插件描述和版本都是用户在初始化插件的时候自定义的。</p>
+<p><strong>EXECUTABLE_FUNCTION</strong> 代表了要暴露出的插件函数，也就是插件真正的可执行模块。一个插件脚本文件中可以包含N个插件的可执行模块。其数组中包含的字符串必须是类方法中的存在的。在这个例子中，数组的值里有“example”，所以下方的example类方法会暴露出去。</p>
+<p>注意：有且仅有包含<strong>EXECUTABLE_FUNCTION</strong>属性的类会被当作插件类。</p>
+<pre class="codehilite"><code>    @classmethod
+    @validate_annotations   # use to valid Array, Matrix, Volume's dims
+    def example(cls, input_data1: CUSTOM) -&gt; Tuple[CUSTOM, CUSTOM]:
+</code></pre>
+
+<p><strong>@classmethod</strong> 必选，类方法装饰器。用于作为插件的函数必须是类方法。
+<strong>@validate_annotations</strong> 可选，本软件自定义。用于验证输入输出数据是否真正符合注释要求，如可为Matrix类添加"col=2, row=3"的注释，使用此装饰器即可自动对输入的Matrix数据进行维度验证。</p>
+<p>插件函数中的输入输出都必须带有type hint。此例子中的<strong>CUSTOM</strong>仅作为占位符，在实际的插件中要被替换为有效类型。软件允许使用的类型参见下章：</p>
+<h2 id="_2">例子</h2>
+<p>以高斯平滑为例写一个最简化的插件 (删除了注释)</p>
+<pre class="codehilite"><code>from pmt_type import *
+from pmt_type_options import *
+from typing import Annotated, Tuple
+
+# Your import goes here
+from skimage import filters
+
+class my_smooth:
+    &quot;&quot;&quot;
+        Gaussian smooth
+    &quot;&quot;&quot;
+    VERSION = '1.0'
+    EXECUTABLE_FUNCTION = [&quot;smooth&quot;] 
+
+    @classmethod
+    def smooth(cls, input_data1: Matrix) -&gt; Matrix:
+        result = filters.gaussian(input_data1, sigma=1, preserve_range=True)
+        return result   
+</code></pre>
+
+<p>上面的代码使用了Ski-image库再带的高斯平滑函数。输入数据为二维数组，因此使用Matrix类，输出数据为等尺寸的二维数组，因此类型也是Matrix。以这样的方式注册的插件，在工作流中显示为（下图）：
+<img alt="Image" src="../images/smooth_node_simple.png" /></p>
+<h2 id="_3">增加参数</h2>
+<p>紧跟上一个例子，gaussian的sigma是一个超参数，应该因工作流不同而可以随时被更改。为此可以这样修改函数头：</p>
+<pre class="codehilite"><code>    @classmethod
+    def smooth(cls, input_data1: Matrix, sigma: float=1) -&gt; Matrix:
+</code></pre>
+
+<p>语法与Python书写习惯一致,但要注意，作为参数存在的属性必须有默认赋值，如果这样写，那么在工作流中将完全不同：</p>
+<pre class="codehilite"><code>    @classmethod
+    def smooth(cls, input_data1: Matrix, sigma: float) -&gt; Matrix:
+</code></pre>
+
+<p>因为此时sigma会被当做独立的输入，而不是参数。对比效果参见下图
+<img alt="Image" src="../images/plugin_param.png" /></p>
+<h2 id="_4">自定义描述</h2>
+<p>以上例子都是软件会自动根据用户书写的语法给输入输出定义名称，但用户也可以自定义，见如下代码</p>
+<pre class="codehilite"><code>    @classmethod
+    def smooth_rename(cls, input_data1: Matrix, simga: float=1) -&gt; Matrix:
+        &quot;&quot;&quot;
+            Gaussian smooth on 2D data
+
+            Parameters:
+                matrix: the main input
+                sigma: the parameter of gaussian smooth
+
+            Returns:
+                smoothed_matrix: the main output
+        &quot;&quot;&quot;
+        a = gaussian(input_data1, sigma=sigma)
+
+        return a
+</code></pre>
+
+<p>任何Google-style或reStructure Text都可以被软件识别，工作流中的插件节点就会随之变化。
+<img alt="Image" src="../images/plugin_docstring.png" /></p>
+<h2 id="_5">代码与工作流节点的关系</h2>
+<p><img alt="Image" src="../images/code_to_node.png" />
+插件需求总结： 
+ - 函数的输入 → 节点的输入
+ - 带有默认值的输入 → 节点的可调超参数
+ - 函数的输出 → 节点的输出
+ - 输入输出和参数类型  → 节点类型 （同类型可相连，详见工作流章节）
+ - docstring → 节点各元素的自定义命名 </p>
+<h2 id="_6">即时测试</h2>
+<p>用户可以直接在插件界面的IDE区运行代码，此时插件运行不受沙箱限制。</p>
+<h2 id="python_1">默认Python运行环境</h2>
+<p>插件和工作流默认运行在本软件自带的python环境（pmtaro_1.2），用户可以在设置页或插件和工作流页的下方切换为其他环境。默认环境与其他python环境并无二至，用户可以自行查看和安装其他库到其中。</p>
+<h2 id="type-hint-pipeline">Type Hint &amp; Pipeline类型</h2>
+<table>
+<thead>
+<tr>
+<th>type hint</th>
+<th>Python变量类型</th>
+<th>pipeline类型</th>
+<th>类标注</th>
+<th>Annotated参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str</td>
+<td>str</td>
+<td>STRING</td>
+<td>StringOptions</td>
+<td>{multiline=False, regx=True, usage=None, enum=[]}</td>
+<td>--</td>
+</tr>
+<tr>
+<td>int</td>
+<td>int</td>
+<td>INT</td>
+<td>IntOptions</td>
+<td>{min=None, max=None, step=None}</td>
+<td>--</td>
+</tr>
+<tr>
+<td>float</td>
+<td>float</td>
+<td>FLOAT</td>
+<td>FloatOptions</td>
+<td>{min=None, max=None, step=None}</td>
+<td>--</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>bool</td>
+<td>BOOLEAN</td>
+<td>BooleanOptions</td>
+<td>{usage=None}</td>
+<td>--</td>
+</tr>
+<tr>
+<td>dict</td>
+<td>dict</td>
+<td>DICT</td>
+<td>DictOptions</td>
+<td>{enable_add=False}</td>
+<td>--</td>
+</tr>
+<tr>
+<td>Array</td>
+<td>np.array</td>
+<td>1D</td>
+<td>ArrayOptions</td>
+<td>{dim=None, dim_desc=None}</td>
+<td>任意长度的一维数据，可以通过annotated参数定义更具体的维度尺寸</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>np.array</td>
+<td>2D</td>
+<td>MatrixOptions</td>
+<td>{first_dim=None, second_dim=None, first_dim_desc=None, second_dim_desc=None}</td>
+<td>任意尺寸的二维矩阵，可以通过annotated参数定义更具体的维度尺寸</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>np.array</td>
+<td>3D</td>
+<td>VolumeOptions</td>
+<td>{fisrt_dim=None, second_dim=None, third_dim=None, fisrt_dim_desc=None, second_dim_desc=None, third_dim_desc=None}</td>
+<td>任意尺寸的三维矩阵，可以通过annotated参数定义更具体的维度尺寸</td>
+</tr>
+<tr>
+<td>VolumeT</td>
+<td>np.array</td>
+<td>4D</td>
+<td>StringOptions</td>
+<td>{fisrt_dim=None, second_dim=None, third_dim=None, fourth_dim=None, fisrt_dim_desc=None, second_dim_desc=None, third_dim_desc=None, fourth_dim_desc=None}</td>
+<td>任意尺寸的四维矩阵，可以通过annotated参数定义更具体的维度尺寸</td>
+</tr>
+<tr>
+<td>DataFrame</td>
+<td>pandas.DataFrame</td>
+<td>TABLE</td>
+<td>--</td>
+<td>--</td>
+<td>pandas Dataframe数据</td>
+</tr>
+<tr>
+<td>DICOM_FILE</td>
+<td>str</td>
+<td>DICOM_FILE</td>
+<td>--</td>
+<td>--</td>
+<td>DICOM文件路径</td>
+</tr>
+<tr>
+<td>NIFTI_FILE</td>
+<td>str</td>
+<td>NIFTI_FILE</td>
+<td>--</td>
+<td>--</td>
+<td>NIFTI文件路径</td>
+</tr>
+<tr>
+<td>IMAGE_FILE</td>
+<td>str</td>
+<td>IMAGE_FILE</td>
+<td>--</td>
+<td>--</td>
+<td>常规图像格式的文件路径</td>
+</tr>
+<tr>
+<td>JSON_FILE</td>
+<td>str</td>
+<td>JSON_FILE</td>
+<td>--</td>
+<td>--</td>
+<td>JSON文件路径</td>
+</tr>
+<tr>
+<td>FILE</td>
+<td>str</td>
+<td>FILE</td>
+<td>FileOptions</td>
+<td>{file_upload=False, extensions=['*']}</td>
+<td>任意文件路径</td>
+</tr>
+<tr>
+<td>PATIENT</td>
+<td>list</td>
+<td>PATIENT_FILE_LIST</td>
+<td>--</td>
+<td>--</td>
+<td>包含N个STUDY_FILE_LIST的JSON结构，结构如下：[{"study_UID": <str>, "study_description": <str>, "study_list": <STUDY_FILE_LIST>}, ...]</td>
+</tr>
+<tr>
+<td>STUDY</td>
+<td>list</td>
+<td>STUDY_FILE_LIST</td>
+<td>--</td>
+<td>--</td>
+<td>包含N个SERIES_FILE_LIST的JSON结构，结构如下：[{"series_UID": <str>, "series_description": <str>, "series_list": <list>}, ...]</td>
+</tr>
+<tr>
+<td>SERIES</td>
+<td>list</td>
+<td>SERIES_FILE_LIST</td>
+<td>--</td>
+<td>--</td>
+<td>包含组合成一个完整Series的DICOM文件路径的数组</td>
+</tr>
+<tr>
+<td>DICOM_FILE_LIST</td>
+<td>list</td>
+<td>DICOM_FILE_LIST</td>
+<td>--</td>
+<td>--</td>
+<td>包含任意DICOM文件路径的数组</td>
+</tr>
+</tbody>
+</table>
+<h3 id="annotated">Annotated的使用方法：</h3>
+<p>代码示例：</p>
+<pre class="codehilite"><code>    sigma_with_options = Annotated[float, FloatOptions(min=0, max=50, step=0.1)]
+
+    @classmethod
+    def get_dicom_from_dicom_list(data: SERIES, sigma: sigma_with_options=0.3) -&gt; DICOM_FILE:
+</code></pre>
+
+<p>只需要遵循Python type hint的标准语法逻辑，但是用本软件定义的Annotation类（如FloatOptions）即可</p>
+<h2 id="_7">另存为</h2>
+<p>如果用户修改了插件中主类的名称，当用户存储时，就会提示是否需要另存为。因为插件的调用是由主类的名称直接决定的，修改了这个名称也就会导致修改了插件的命名。</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="screening_page.html" class="btn btn-neutral float-left" title="阅片页面"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="workflow_page.html" class="btn btn-neutral float-right" title="工作流界面">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="screening_page.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="workflow_page.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
