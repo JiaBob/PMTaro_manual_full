@@ -21,6 +21,30 @@
 - 输出/预览节点
 接下来对以下节点分别描述
 
+### 节点类型
+
+| pipeline类型 | 颜色 |
+| - | - |
+| BOOLEAN | <span style="color: #F77;">●</span> |
+| INT | <span style="color: #7F7;">●</span> |
+| FLOAT | <span style="color: #7F7;">●</span> |
+| STRING | <span style="color: #77F;">●</span> |
+| DICT | <span style="color: #fb923c;">●</span> |
+| TABLE | <span style="color: #a3e635;">●</span> |
+| 1D | <span style="color: #facc15;">●</span> |
+| 2D | <span style="color: #22d3ee;">●</span> |
+| 3D | <span style="color: #e879f9;">●</span> |
+| 4D | <span style="color: #64748b;">●</span> |
+| FILE | <span style="color: #4338ca;">●</span> |
+| JSON_FILE | <span style="color: #b45309;">●</span> |
+| DICOM_FILE | <span style="color: #0f766e;">●</span> |
+| NIFTI_FILE | <span style="color: #be185d;">●</span> |
+| IMAGE_FILE | <span style="color: #2563eb;">●</span> |
+| DICOM_FILE_LIST | <span style="color: #f472b6;">●</span> |
+| SERIES_FILE_LIST | <span style="color: #ec4899;">●</span> |
+| STUDY_FILE_LIST | <span style="color: #8b5cf6;">●</span> |
+
+
 ### 输入节点
 ![Image](../images/input_nodes.png)
 作为数据流的起点，输入节点不允许用户自定义，必须使用软件预设的几个节点（如上图）。主要分为DICOM加载类和常量类。
@@ -47,3 +71,6 @@ DICOM加载类必须以DICOM层级数据为输入，输入一定都是DICOM文�
 
 
 ## 运行当前工作流
+
+
+
