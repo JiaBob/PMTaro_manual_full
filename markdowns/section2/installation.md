@@ -2,7 +2,7 @@
 本软件是单机版，用户可以通过官网获取下载器的PMTaro Installer.exe的链接，后续的安装，更新，卸载功能均包含在此下载器中。注意：下载过程需要联网。
 
 
-![Image](../images/installation1.png.png)
+![Image](../images/installation1.png)
 第一步: 双击PMTaro Installer.exe进入下载和安装界面。可即时查看所要下载的版本的更新日志。点击“下一步”。
 
 

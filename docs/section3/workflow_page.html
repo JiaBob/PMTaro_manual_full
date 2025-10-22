@@ -75,15 +75,17 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#_2">创建/编辑工作流</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#_3">输入节点</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">节点类型</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_4">转换节点</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">输入节点</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">转换节点</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_5">复制/删除/重命名工作流</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">复制/删除/重命名工作流</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_6">运行当前工作流</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">运行当前工作流</a>
     </li>
     </ul>
                   </li>
@@ -131,7 +133,90 @@
 - 插件节点
 - 输出/预览节点
 接下来对以下节点分别描述</p>
-<h3 id="_3">输入节点</h3>
+<h3 id="_3">节点类型</h3>
+<table>
+<thead>
+<tr>
+<th>pipeline类型</th>
+<th>颜色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BOOLEAN</td>
+<td><span style="color: #F77;">●</span></td>
+</tr>
+<tr>
+<td>INT</td>
+<td><span style="color: #7F7;">●</span></td>
+</tr>
+<tr>
+<td>FLOAT</td>
+<td><span style="color: #7F7;">●</span></td>
+</tr>
+<tr>
+<td>STRING</td>
+<td><span style="color: #77F;">●</span></td>
+</tr>
+<tr>
+<td>DICT</td>
+<td><span style="color: #fb923c;">●</span></td>
+</tr>
+<tr>
+<td>TABLE</td>
+<td><span style="color: #a3e635;">●</span></td>
+</tr>
+<tr>
+<td>1D</td>
+<td><span style="color: #facc15;">●</span></td>
+</tr>
+<tr>
+<td>2D</td>
+<td><span style="color: #22d3ee;">●</span></td>
+</tr>
+<tr>
+<td>3D</td>
+<td><span style="color: #e879f9;">●</span></td>
+</tr>
+<tr>
+<td>4D</td>
+<td><span style="color: #64748b;">●</span></td>
+</tr>
+<tr>
+<td>FILE</td>
+<td><span style="color: #4338ca;">●</span></td>
+</tr>
+<tr>
+<td>JSON_FILE</td>
+<td><span style="color: #b45309;">●</span></td>
+</tr>
+<tr>
+<td>DICOM_FILE</td>
+<td><span style="color: #0f766e;">●</span></td>
+</tr>
+<tr>
+<td>NIFTI_FILE</td>
+<td><span style="color: #be185d;">●</span></td>
+</tr>
+<tr>
+<td>IMAGE_FILE</td>
+<td><span style="color: #2563eb;">●</span></td>
+</tr>
+<tr>
+<td>DICOM_FILE_LIST</td>
+<td><span style="color: #f472b6;">●</span></td>
+</tr>
+<tr>
+<td>SERIES_FILE_LIST</td>
+<td><span style="color: #ec4899;">●</span></td>
+</tr>
+<tr>
+<td>STUDY_FILE_LIST</td>
+<td><span style="color: #8b5cf6;">●</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">输入节点</h3>
 <p><img alt="Image" src="../images/input_nodes.png" />
 作为数据流的起点，输入节点不允许用户自定义，必须使用软件预设的几个节点（如上图）。主要分为DICOM加载类和常量类。</p>
 <p>DICOM加载类必须以DICOM层级数据为输入，输入一定都是DICOM文件，且这些文件必须来自软件内已存的数据集。目前提供：
@@ -140,13 +225,13 @@
  - Study输入节点：用户可以拖动Study层数据放入此节点。当“过滤”开启时，用户可以选择以当前Series内的特定Instance作为输出</p>
 <p><img alt="Image" src="../images/nested_input.gif" />
 输入节点可以彼此嵌套，如 study → series 最后以instance为输出。</p>
-<h3 id="_4">转换节点</h3>
-<h2 id="_5">复制/删除/重命名工作流</h2>
+<h3 id="_5">转换节点</h3>
+<h2 id="_6">复制/删除/重命名工作流</h2>
 <p><img alt="Image" src="../images/duplicate_remove_workflow.png" />
 对于已经存储的工作流，右键可以进行复制/删除操作</p>
 <p><img alt="Image" src="../images/rename_workflow.png" />
 点击工作流操作区下方的工作流名称，可以修改标签颜色，名称和运行环境（与插件环境相同）</p>
-<h2 id="_6">运行当前工作流</h2>
+<h2 id="_7">运行当前工作流</h2>
               
             </div>
           </div><footer>
