@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>数据集页面 - PMTaro Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u6570\u636e\u96c6\u9875\u9762";
+        var mkdocs_page_input_path = "section3\\dataset_page.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+<style>
+#language-switcher {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 9999 !important;
+    background: white !important;
+    border: 1px solid #ddd !important;
+    border-radius: 5px !important;
+    padding: 5px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+
+.lang-btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 8px 12px !important;
+    cursor: pointer !important;
+    border-radius: 3px !important;
+    margin: 2px !important;
+    font-size: 12px !important;
+}
+
+.lang-btn:hover {
+    background: #f0f0f0 !important;
+}
+
+.lang-btn.active {
+    background: #2980b9 !important;
+    color: white !important;
+}
+</style>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> PMTaro Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../section1/index.html">1 介绍</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">2 安装与设置</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../section2/installation.html">下载 PMTaro 安装程序 & 运行设置向导</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section2/activation.html">激活</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section2/update.html">更新</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section2/uninstallation.html">删除</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">3 软件操作指南</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="homepage.html">欢迎页面</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">数据集页面</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">从本地导入数据</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">添加数据并一键解析</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">手动分割</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">增加新数据</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">数据检索</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">数据重排</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_8">关闭数据集 &amp; 返回主页</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#python">Python运行环境</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="project_page.html">项目页面</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="screening_page.html">阅片页面</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="plugin_page.html">插件页面</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="workflow_page.html">工作流界面</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PMTaro Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">3 软件操作指南</li>
+      <li class="breadcrumb-item active">数据集页面</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+<div id="language-switcher">
+    <button onclick="switchLanguage('zh')" id="btn-zh" class="lang-btn">中文</button>
+    <button onclick="switchLanguage('en')" id="btn-en" class="lang-btn">English</button>
+</div>
+
+<script>
+function switchLanguage(lang) {
+    var currentPath = window.location.pathname;
+    var currentPage = '';
+    
+    if (currentPath.includes('/zh/')) {
+        currentPage = currentPath.replace('/zh/', '').replace('.html', '');
+    } else if (currentPath.includes('/en/')) {
+        currentPage = currentPath.replace('/en/', '').replace('.html', '');
+    }
+    
+    var basePath = window.location.origin + window.location.pathname.split('/zh/')[0].split('/en/')[0];
+    
+    if (lang === 'zh') {
+        window.location.href = basePath + '/zh/' + (currentPage || 'index') + '.html';
+    } else {
+        window.location.href = basePath + '/en/' + (currentPage || 'index') + '.html';
+    }
+}
+
+var currentPath = window.location.pathname;
+if (currentPath.includes('/en/')) {
+    document.getElementById('btn-en').classList.add('active');
+} else {
+    document.getElementById('btn-zh').classList.add('active');
+}
+</script>
+
+
+                <h1 id="_1">数据集页面</h1>
+<p>此页面可以进行以下操作：
+- 从本地导入数据
+- 数据检索
+- 数据重排</p>
+<h2 id="_2">从本地导入数据</h2>
+<h3 id="_3">添加数据并一键解析</h3>
+<p><img alt="Image" src="../images/parse_raw_data.gif" />
+操作流程：
+1. 拖入文件夹到左侧真实文件目录区
+2. 在数据准备区（中间区域）点击“Prepare”
+3. Project区域在对应project上点击“Parse”
+注意：多个project可以并行解析</p>
+<h3 id="_4">手动分割</h3>
+<p>默认情况下，软件会自动根据用户设备的硬件情况分割合理大小的project。但用户也可以自行调整想要的project数量。</p>
+<p><img alt="Image" src="../images/manual_split.gif" />
+操作流程：
+1. 点击数据准备区的prepare键右侧的三个点，选择“手动分割”
+2. 点击底部的“分割”键，选择要分割出的project数量，然后点击“分割”</p>
+<p>注意：本软件将会采用病人数据完整性原则，在自动分割时，避免同一个病人的数据被分割到不同project。为此采取了 <strong>“自动合并”</strong> 原则，即一个project的数据被解析完毕时，如果其中存在数据已经属于已存project，那么这些数据将会被自动移动到那些project中。比如：project1已经解析完毕，其中存在PatientA的数据，现在解析project2发现其中的data1也属于PatientA，那么data1就会被自动移动到project1。</p>
+<h3 id="_5">增加新数据</h3>
+<p><img alt="Image" src="../images/add_new_root.gif" />
+操作流程：
+1. 往左侧真是文件目录区拖入新的文件夹
+2. 在数据准备区点击“刷新”键，可以看到新的文件被显示在中间区域。蓝色文件意味着数据已经被解析，灰色文件为未处理的文件。
+3. 点击底部的“分割”键，选择新增project数量。此时会将灰色文件放入新增project。</p>
+<p>数据准备区的文件颜色：
+- 绿色：已纳入任意project的文件。
+- 蓝色：已纳入任意project且已经被解析。
+- 红色：非合法DICOM文件，包括无图像的DICOM文件和非DICOM格式的文件。
+- 灰色：未纳入任何project的文件。</p>
+<h2 id="_6">数据检索</h2>
+<p>用户可以对整个数据集中的数据进行总览</p>
+<p><img alt="Image" src="../images/retrieval.gif" />
+操作流程：
+1. 点击“检索”图标，进入检索区，此时检索区会替换数据准备区
+2. 在检索区的右上角点击“查询”图表，可以根据层级提交查询需求
+3. 查询结果会显示在检索区内部</p>
+<p>查询可选项：
+- 数据集
+- 项目
+- 层级（Patient/Study/Series）
+- DICOM标签（符合所选层级的DICOM Tag，可多标签检索）</p>
+<p>在对于检索到的数据，可以展开其缩略图。</p>
+<p>如果是检索Patient或Series层，右侧Dashboard区会自动显示相关维度的统计图表，如病人性别/年龄，模态/器官。</p>
+<h2 id="_7">数据重排</h2>
+<p>Project中的数据是可以灵活调整的，调整的基本单位是Patient。比如，用户可以把PatientA从Project1移动到Project2。
+除了直接移动数据，本软件还提供了数据缓存区，用户可以把任意数据暂时从Project抽离到缓存区，比如数据清洗的场景，缓存区就相当于数据回收站。</p>
+<p><img alt="Image" src="../images/rearrangement.gif" />
+操作流程：
+1. 先进入检索区
+2. 在想要重排的数据右侧点击“移入缓存区”
+3. 此数据会从原所属的Project中移除，并添加到右侧缓存区
+4. 在缓存区中点击“移动”键，可以选择要移入的Project
+5. 选择“删除”，数据就会从这个Dataset中移除，但仍然可以在检索区检索到</p>
+<h2 id="_8">关闭数据集 &amp; 返回主页</h2>
+<p>软件限制用户同一时间只能打开一个Dataset。因此需要先关闭当前Dataset才能打开新的。</p>
+<p><img alt="Image" src="../images/rearrangement.gif" />
+1. 返回软件主页，但不退出当前Dataset。
+2. 关闭整个Dataset，包括其选项卡中的全部内容。选项卡上的白色的上横条意味着它们都属于同一个Dataset。
+3. 仅关闭指定Project</p>
+<h2 id="python">Python运行环境</h2>
+              
+
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="homepage.html" class="btn btn-neutral float-left" title="欢迎页面"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="project_page.html" class="btn btn-neutral float-right" title="项目页面">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="homepage.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="project_page.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

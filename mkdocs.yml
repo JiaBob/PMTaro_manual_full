@@ -20,12 +20,12 @@ nav:
   - 插件页面: section3/plugin_page.md
   - 工作流界面: section3/workflow_page.md
 
-
-
 plugins:
 - search
 site_name: PMTaro Manual
-theme: readthedocs
+theme: 
+  name: readthedocs
+  custom_dir: custom_theme
 docs_dir: markdowns
-site_dir: docs
+site_dir: site/zh
 use_directory_urls: false

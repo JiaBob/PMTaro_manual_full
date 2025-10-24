@@ -4,6 +4,7 @@ markdown_extensions:
 - admonition
 - codehilite
 - toc
+
 nav:
 - Home: index.md
 - 1 Introduction: section1/index.md
@@ -17,10 +18,10 @@ nav:
   - Dataset Detail Page: section4/subsection3.md
   - Dataset Browing Page: section4/subsection4.md
   - Pipelines Page: section4/subsection5.md
-- '5 Welcome Page ':
+- 5 Welcome Page:
   - New Dataset: section5/subsection1.md
   - Recent Dataset: section5/subsection2.md
-- '6 Dataset Parse Page ':
+- 6 Dataset Parse Page:
   - Add Folder: section6/subsection1.md
   - Prepare Dataset: section6/subsection2.md
   - Refresh: section6/subsection3.md
@@ -39,9 +40,9 @@ nav:
 - 8 Dataset Browing Page:
   - Image Interface: section8/subsection1.md
   - Data Interaction & Toolbar: section8/subsection2.md
-- '9 Plugin Page ':
+- 9 Plugin Page:
   - Node: section9/subsection1.md
-  - 'Plugin ': section9/subsection2.md
+  - Plugin: section9/subsection2.md
 - 10 Pipelines Page (MPF Post-processing):
   - New Pipeline: section10/subsection1.md
   - Pipeline Control Panel: section10/subsection2.md
@@ -49,10 +50,14 @@ nav:
   - MPF Phase Map Calculation Pipeline (Auto): section10/subsection5.md
   - RMPFSL Map Calculation Pipeline (Auto): section10/subsection6.md
   - MPF Map Calculation Pipeline (Auto): section10/subsection7.md
+
 plugins:
 - search
 site_name: PMTaro Manual
-theme: readthedocs
-docs_dir: markdowns
-site_dir: docs
+theme: 
+  name: readthedocs
+  custom_dir: custom_theme
+docs_dir: markdowns_en
+site_dir: site/en
 use_directory_urls: false
+

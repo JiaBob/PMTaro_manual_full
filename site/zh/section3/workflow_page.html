@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>工作流界面 - PMTaro Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u5de5\u4f5c\u6d41\u754c\u9762";
+        var mkdocs_page_input_path = "section3\\workflow_page.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+<style>
+#language-switcher {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 9999 !important;
+    background: white !important;
+    border: 1px solid #ddd !important;
+    border-radius: 5px !important;
+    padding: 5px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+
+.lang-btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 8px 12px !important;
+    cursor: pointer !important;
+    border-radius: 3px !important;
+    margin: 2px !important;
+    font-size: 12px !important;
+}
+
+.lang-btn:hover {
+    background: #f0f0f0 !important;
+}
+
+.lang-btn.active {
+    background: #2980b9 !important;
+    color: white !important;
+}
+</style>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> PMTaro Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../section1/index.html">1 介绍</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">2 安装与设置</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../section2/installation.html">下载 PMTaro 安装程序 & 运行设置向导</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section2/activation.html">激活</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section2/update.html">更新</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../section2/uninstallation.html">删除</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">3 软件操作指南</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="homepage.html">欢迎页面</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="dataset_page.html">数据集页面</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="project_page.html">项目页面</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="screening_page.html">阅片页面</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="plugin_page.html">插件页面</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">工作流界面</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">创建/编辑工作流</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">节点类型</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">输入节点</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">转换节点</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">复制/删除/重命名工作流</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">运行当前工作流</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PMTaro Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">3 软件操作指南</li>
+      <li class="breadcrumb-item active">工作流界面</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+<div id="language-switcher">
+    <button onclick="switchLanguage('zh')" id="btn-zh" class="lang-btn">中文</button>
+    <button onclick="switchLanguage('en')" id="btn-en" class="lang-btn">English</button>
+</div>
+
+<script>
+function switchLanguage(lang) {
+    var currentPath = window.location.pathname;
+    var currentPage = '';
+    
+    if (currentPath.includes('/zh/')) {
+        currentPage = currentPath.replace('/zh/', '').replace('.html', '');
+    } else if (currentPath.includes('/en/')) {
+        currentPage = currentPath.replace('/en/', '').replace('.html', '');
+    }
+    
+    var basePath = window.location.origin + window.location.pathname.split('/zh/')[0].split('/en/')[0];
+    
+    if (lang === 'zh') {
+        window.location.href = basePath + '/zh/' + (currentPage || 'index') + '.html';
+    } else {
+        window.location.href = basePath + '/en/' + (currentPage || 'index') + '.html';
+    }
+}
+
+var currentPath = window.location.pathname;
+if (currentPath.includes('/en/')) {
+    document.getElementById('btn-en').classList.add('active');
+} else {
+    document.getElementById('btn-zh').classList.add('active');
+}
+</script>
+
+
+                <h1 id="_1">工作流页</h1>
+<p><img alt="Image" src="../images/workflow_page.png" />
+工作流页由左侧功能区打开，开启后界面分为两块：
+1. 已存工作流标签区：用于使用已有的工作流
+2. 当前工作流操作区：用于单次运行或编辑当前工作流</p>
+<p>在工作流页可以进行一下操作：
+- 创建工作流
+- 复制/删除/重命名工作流
+- 编辑当前工作流
+- 运行当前工作流</p>
+<h2 id="_2">创建/编辑工作流</h2>
+<p><img alt="Image" src="../images/create_simple_workflow.png" />
+工作流由N个节点串联组成，节点与节点之间可以相连。连接规则仅为同类型可连。一个节点的输入必须都有连接（可选输入除外），但对输出没有要求。可以理解为要想运行节点就必须满足它的输入，但是它的输出并不一定都用得到。对工作流的任何编辑都需要点击下方的“保存键”进行确认。</p>
+<p>节点分为以下几类：
+- 输入节点
+- 转换节点
+- 插件节点
+- 输出/预览节点
+接下来对以下节点分别描述</p>
+<h3 id="_3">节点类型</h3>
+<table>
+<thead>
+<tr>
+<th>pipeline类型</th>
+<th>颜色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BOOLEAN</td>
+<td><span style="color: #F77;">●</span></td>
+</tr>
+<tr>
+<td>INT</td>
+<td><span style="color: #7F7;">●</span></td>
+</tr>
+<tr>
+<td>FLOAT</td>
+<td><span style="color: #7F7;">●</span></td>
+</tr>
+<tr>
+<td>STRING</td>
+<td><span style="color: #77F;">●</span></td>
+</tr>
+<tr>
+<td>DICT</td>
+<td><span style="color: #fb923c;">●</span></td>
+</tr>
+<tr>
+<td>TABLE</td>
+<td><span style="color: #a3e635;">●</span></td>
+</tr>
+<tr>
+<td>1D</td>
+<td><span style="color: #facc15;">●</span></td>
+</tr>
+<tr>
+<td>2D</td>
+<td><span style="color: #22d3ee;">●</span></td>
+</tr>
+<tr>
+<td>3D</td>
+<td><span style="color: #e879f9;">●</span></td>
+</tr>
+<tr>
+<td>4D</td>
+<td><span style="color: #64748b;">●</span></td>
+</tr>
+<tr>
+<td>FILE</td>
+<td><span style="color: #4338ca;">●</span></td>
+</tr>
+<tr>
+<td>JSON_FILE</td>
+<td><span style="color: #b45309;">●</span></td>
+</tr>
+<tr>
+<td>DICOM_FILE</td>
+<td><span style="color: #0f766e;">●</span></td>
+</tr>
+<tr>
+<td>NIFTI_FILE</td>
+<td><span style="color: #be185d;">●</span></td>
+</tr>
+<tr>
+<td>IMAGE_FILE</td>
+<td><span style="color: #2563eb;">●</span></td>
+</tr>
+<tr>
+<td>DICOM_FILE_LIST</td>
+<td><span style="color: #f472b6;">●</span></td>
+</tr>
+<tr>
+<td>SERIES_FILE_LIST</td>
+<td><span style="color: #ec4899;">●</span></td>
+</tr>
+<tr>
+<td>STUDY_FILE_LIST</td>
+<td><span style="color: #8b5cf6;">●</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">输入节点</h3>
+<p><img alt="Image" src="../images/input_nodes.png" />
+作为数据流的起点，输入节点不允许用户自定义，必须使用软件预设的几个节点（如上图）。主要分为DICOM加载类和常量类。</p>
+<p>DICOM加载类必须以DICOM层级数据为输入，输入一定都是DICOM文件，且这些文件必须来自软件内已存的数据集。目前提供：
+ - DICOM输入节点：用户可以拖动Instance层数据放入此节点
+ - Series输入节点：用户可以拖动Series层数据放入此节点。当“过滤”开启时，用户可以选择以当前Series内的特定Instance作为输出，同时可以以Series为输入（详见）
+ - Study输入节点：用户可以拖动Study层数据放入此节点。当“过滤”开启时，用户可以选择以当前Series内的特定Instance作为输出</p>
+<p><img alt="Image" src="../images/nested_input.gif" />
+输入节点可以彼此嵌套，如 study → series 最后以instance为输出。</p>
+<h3 id="_5">转换节点</h3>
+<h2 id="_6">复制/删除/重命名工作流</h2>
+<p><img alt="Image" src="../images/duplicate_remove_workflow.png" />
+对于已经存储的工作流，右键可以进行复制/删除操作</p>
+<p><img alt="Image" src="../images/rename_workflow.png" />
+点击工作流操作区下方的工作流名称，可以修改标签颜色，名称和运行环境（与插件环境相同）</p>
+<h2 id="_7">运行当前工作流</h2>
+              
+
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="plugin_page.html" class="btn btn-neutral float-left" title="插件页面"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="plugin_page.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
