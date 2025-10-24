@@ -10,8 +10,8 @@ nav:
 - 1 Introduction: section1/index.md
 - 2 Software Description: section2/index.md
 - 3 Installation and Setup:
-  - Download PMTaro installer & Run setup wizard: section3/subsection1.md
-  - Configuration: section3/subsection2.md
+  - Download PMTaro installer & Run setup wizard: section3/subsection1.html
+  - Configuration: section3/subsection2.html
 - 4 Software Page Overview:
   - Welcome Page: section4/subsection1.md
   - Dataset Parse Page: section4/subsection2.md
