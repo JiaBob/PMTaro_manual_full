@@ -22,7 +22,40 @@
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+      <script>hljs.highlightAll();</script>
+<style>
+#language-switcher {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 9999 !important;
+    background: white !important;
+    border: 1px solid #ddd !important;
+    border-radius: 5px !important;
+    padding: 5px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+
+.lang-btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 8px 12px !important;
+    cursor: pointer !important;
+    border-radius: 3px !important;
+    margin: 2px !important;
+    font-size: 12px !important;
+}
+
+.lang-btn:hover {
+    background: #f0f0f0 !important;
+}
+
+.lang-btn.active {
+    background: #2980b9 !important;
+    color: white !important;
+}
+</style>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -71,7 +104,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="plugin_page.html">插件页面</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="workflow_page.html">工作流界面</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">工作流界面</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#_2">创建/编辑工作流</a>
         <ul>
@@ -114,6 +147,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
+<div id="language-switcher">
+    <button onclick="switchLanguage('zh')" id="btn-zh" class="lang-btn">中文</button>
+    <button onclick="switchLanguage('en')" id="btn-en" class="lang-btn">English</button>
+</div>
+
+<script>
+function switchLanguage(lang) {
+    var currentPath = window.location.pathname;
+    var currentPage = '';
+    
+    // Extract current page for GitHub Pages
+    if (currentPath.includes('/en/')) {
+        currentPage = currentPath.replace('/PMTaro_manual_full/en/', '');
+    } else {
+        currentPage = currentPath.replace('/PMTaro_manual_full/', '');
+    }
+    
+    // Remove trailing slash and index.html
+    currentPage = currentPage.replace('index.html', '').replace(/\/$/, '');
+    
+    if (lang === 'zh') {
+        window.location.href = 'https://jiabob.github.io/PMTaro_manual_full/' + currentPage;
+    } else {
+        window.location.href = 'https://jiabob.github.io/PMTaro_manual_full/en/' + currentPage;
+    }
+}
+
+// Detect current language and set active button
+var currentPath = window.location.pathname;
+if (currentPath.includes('/en/')) {
+    document.getElementById('btn-en').classList.add('active');
+} else {
+    document.getElementById('btn-zh').classList.add('active');
+}
+</script>
+
+
                 <h1 id="_1">工作流页</h1>
 <p><img alt="Image" src="../images/workflow_page.png" />
 工作流页由左侧功能区打开，开启后界面分为两块：
@@ -233,6 +303,7 @@
 点击工作流操作区下方的工作流名称，可以修改标签颜色，名称和运行环境（与插件环境相同）</p>
 <h2 id="_7">运行当前工作流</h2>
               
+
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">

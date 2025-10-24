@@ -22,7 +22,40 @@
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+      <script>hljs.highlightAll();</script>
+<style>
+#language-switcher {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 9999 !important;
+    background: white !important;
+    border: 1px solid #ddd !important;
+    border-radius: 5px !important;
+    padding: 5px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+
+.lang-btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 8px 12px !important;
+    cursor: pointer !important;
+    border-radius: 3px !important;
+    margin: 2px !important;
+    font-size: 12px !important;
+}
+
+.lang-btn:hover {
+    background: #f0f0f0 !important;
+}
+
+.lang-btn.active {
+    background: #2980b9 !important;
+    color: white !important;
+}
+</style>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -50,7 +83,7 @@
               </ul>
               <p class="caption"><span class="caption-text">2 安装与设置</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="installation.html">下载 PMTaro 安装程序 & 运行设置向导</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">下载 PMTaro 安装程序 & 运行设置向导</a>
     <ul class="current">
     </ul>
                   </li>
@@ -100,6 +133,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
+<div id="language-switcher">
+    <button onclick="switchLanguage('zh')" id="btn-zh" class="lang-btn">中文</button>
+    <button onclick="switchLanguage('en')" id="btn-en" class="lang-btn">English</button>
+</div>
+
+<script>
+function switchLanguage(lang) {
+    var currentPath = window.location.pathname;
+    var currentPage = '';
+    
+    // Extract current page for GitHub Pages
+    if (currentPath.includes('/en/')) {
+        currentPage = currentPath.replace('/PMTaro_manual_full/en/', '');
+    } else {
+        currentPage = currentPath.replace('/PMTaro_manual_full/', '');
+    }
+    
+    // Remove trailing slash and index.html
+    currentPage = currentPage.replace('index.html', '').replace(/\/$/, '');
+    
+    if (lang === 'zh') {
+        window.location.href = 'https://jiabob.github.io/PMTaro_manual_full/' + currentPage;
+    } else {
+        window.location.href = 'https://jiabob.github.io/PMTaro_manual_full/en/' + currentPage;
+    }
+}
+
+// Detect current language and set active button
+var currentPath = window.location.pathname;
+if (currentPath.includes('/en/')) {
+    document.getElementById('btn-en').classList.add('active');
+} else {
+    document.getElementById('btn-zh').classList.add('active');
+}
+</script>
+
+
                 <h1 id="31">3.1 下载和安装</h1>
 <p>本软件是单机版，用户可以通过官网获取下载器的PMTaro Installer.exe的链接，后续的安装，更新，卸载功能均包含在此下载器中。注意：下载过程需要联网。</p>
 <p><img alt="Image" src="../images/installation1.png" />
@@ -128,6 +198,7 @@
 - 免费试用：不需要激活，但部分功能受到限制。
 - 通过证书文件激活：需要用户已经付费购买并获取过证书文件，主要用于离线情况使用软件的情况。</p>
               
+
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">

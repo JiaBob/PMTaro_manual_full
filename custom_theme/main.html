@@ -46,26 +46,33 @@ function switchLanguage(lang) {
     var currentPath = window.location.pathname;
     var currentPage = '';
     
-    if (currentPath.includes('/zh/')) {
-        currentPage = currentPath.replace('/zh/', '').replace('.html', '');
-    } else if (currentPath.includes('/en/')) {
-        currentPage = currentPath.replace('/en/', '').replace('.html', '');
-    }
-    
-    var basePath = window.location.origin + window.location.pathname.split('/zh/')[0].split('/en/')[0];
-    
-    if (lang === 'zh') {
-        window.location.href = basePath + '/zh/' + (currentPage || 'index') + '.html';
+    if (currentPath.includes('/en/')) {
+        currentPage = currentPath.replace('/en/', '');
     } else {
-        window.location.href = basePath + '/en/' + (currentPage || 'index') + '.html';
+        currentPage = currentPath.replace('/', '');
     }
-}
-
-var currentPath = window.location.pathname;
-if (currentPath.includes('/en/')) {
-    document.getElementById('btn-en').classList.add('active');
-} else {
-    document.getElementById('btn-zh').classList.add('active');
+    
+    var isLocal = window.location.hostname === 'localhost' || 
+                  window.location.hostname === '127.0.0.1';
+    
+    if (isLocal) {
+        // Local testing - get full URL with port
+        var port = window.location.port ? ':' + window.location.port : '';
+        var baseUrl = window.location.protocol + '//' + window.location.hostname + port;
+        
+        if (lang === 'zh') {
+            window.location.href = baseUrl + '/' + currentPage;
+        } else {
+            window.location.href = baseUrl + '/en/' + currentPage;
+        }
+    } else {
+        // GitHub Pages
+        if (lang === 'zh') {
+            window.location.href = 'https://jiabob.github.io/PMTaro_manual_full/' + currentPage;
+        } else {
+            window.location.href = 'https://jiabob.github.io/PMTaro_manual_full/en/' + currentPage;
+        }
+    }
 }
 </script>
 

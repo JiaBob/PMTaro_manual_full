@@ -22,7 +22,40 @@
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+      <script>hljs.highlightAll();</script>
+<style>
+#language-switcher {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 9999 !important;
+    background: white !important;
+    border: 1px solid #ddd !important;
+    border-radius: 5px !important;
+    padding: 5px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+
+.lang-btn {
+    background: transparent !important;
+    border: none !important;
+    padding: 8px 12px !important;
+    cursor: pointer !important;
+    border-radius: 3px !important;
+    margin: 2px !important;
+    font-size: 12px !important;
+}
+
+.lang-btn:hover {
+    background: #f0f0f0 !important;
+}
+
+.lang-btn.active {
+    background: #2980b9 !important;
+    color: white !important;
+}
+</style>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -56,7 +89,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="update.html">更新</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="uninstallation.html">删除</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">删除</a>
     <ul class="current">
     </ul>
                   </li>
@@ -100,6 +133,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
+<div id="language-switcher">
+    <button onclick="switchLanguage('zh')" id="btn-zh" class="lang-btn">中文</button>
+    <button onclick="switchLanguage('en')" id="btn-en" class="lang-btn">English</button>
+</div>
+
+<script>
+function switchLanguage(lang) {
+    var currentPath = window.location.pathname;
+    var currentPage = '';
+    
+    // Extract current page for GitHub Pages
+    if (currentPath.includes('/en/')) {
+        currentPage = currentPath.replace('/PMTaro_manual_full/en/', '');
+    } else {
+        currentPage = currentPath.replace('/PMTaro_manual_full/', '');
+    }
+    
+    // Remove trailing slash and index.html
+    currentPage = currentPage.replace('index.html', '').replace(/\/$/, '');
+    
+    if (lang === 'zh') {
+        window.location.href = 'https://jiabob.github.io/PMTaro_manual_full/' + currentPage;
+    } else {
+        window.location.href = 'https://jiabob.github.io/PMTaro_manual_full/en/' + currentPage;
+    }
+}
+
+// Detect current language and set active button
+var currentPath = window.location.pathname;
+if (currentPath.includes('/en/')) {
+    document.getElementById('btn-en').classList.add('active');
+} else {
+    document.getElementById('btn-zh').classList.add('active');
+}
+</script>
+
+
                 <h1 id="_1">卸载</h1>
 <p>用户可以直接使用控制面板的“添加和删除程序”删除软件，或是通过PMTaro Installer.exe（下载和安装时用过的）</p>
 <p>如果使用PMTaro Installer.exe，则应用以下流程
@@ -112,6 +182,7 @@
 - PMTaro Python环境：运行插件和工作流所需要的Python内核，以虚拟环境的形式存在于miniconda环境下。勾选（卸载）后可以释放少量硬盘空间。</p>
 <p>注意：即便是用户勾选删除，用户自己的DICOM数据，本地插件代码和证书文件也不会彻底删除，而是先放入回收站。</p>
               
+
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
